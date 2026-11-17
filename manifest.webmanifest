@@ -1,0 +1,20 @@
+{
+  "id": "./",
+  "name": "恋するIT用語集 — 君に届くまで",
+  "short_name": "恋するIT用語集",
+  "description": "恋愛小説で基本情報技術者試験のIT用語を学ぶ",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f7f3ed",
+  "theme_color": "#8a415a",
+  "lang": "ja",
+  "icons": [
+    {
+      "src": "./favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
