@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f7f3ed">
+<meta name="description" content="恋の続きが気になるうちにIT用語が記憶に残る。基本情報技術者試験を、物語で学ぶオリジナル学習サイト。">
+<title>恋するIT用語集 — 君に届くまで</title>
+<link rel="icon" type="image/svg+xml" href="./favicon.svg">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="stylesheet" href="./styles.css">
+<script src="./stories.js" defer></script>
+<script src="./app.js" defer></script>
+</head>
+<body data-theme="light">
+<div class="app-shell">
+  <aside class="sidebar" aria-label="メインメニュー">
+    <a class="brand" href="#library">
+      <span class="brand-symbol" aria-hidden="true">♡</span>
+      <span><span class="brand-name">恋するIT用語集</span><br><span class="brand-sub">LOVE MEETS TECHNOLOGY</span></span>
+    </a>
+    <nav class="side-nav">
+      <button class="nav-item" data-nav="library" data-action="nav" data-route="library"><span class="nav-icon">⌂</span> 物語の本棚</button>
+      <button class="nav-item" data-nav="glossary" data-action="nav" data-route="glossary"><span class="nav-icon">⌕</span> 用語を探す</button>
+      <button class="nav-item" data-nav="review" data-action="nav" data-route="review"><span class="nav-icon">▤</span> 単語カード</button>
+      <button class="nav-item" data-nav="stats" data-action="nav" data-route="stats"><span class="nav-icon">◷</span> 学習の記録</button>
+    </nav>
+    <div class="sidebar-quote"><p>「大切な言葉は、<br>ちゃんと届いてほしいから」</p><small>第1話　届かないメッセージ</small></div>
+    <div class="side-footer">基本情報技術者試験 学習ノベル<br>非公式・オリジナル教材<br>この端末に読書履歴を保存します</div>
+  </aside>
+  <main class="main" id="mainContent">
+    <header class="topbar">
+      <div class="top-left">
+        <button class="icon-btn" id="backButton" data-action="nav" data-route="library" aria-label="本棚へ戻る" hidden>←</button>
+        <span class="top-label" id="topLabel">恋するIT用語集</span>
+      </div>
+      <div class="top-actions">
+        <button class="icon-btn reader-font" data-action="font-smaller" aria-label="文字を小さくする">A−</button>
+        <button class="icon-btn reader-font" data-action="font-bigger" aria-label="文字を大きくする">A＋</button>
+        <button class="icon-btn" data-action="theme" aria-label="背景色を切り替える">☾</button>
+      </div>
+    </header>
+    <div class="progress-track" aria-hidden="true"><div class="progress-fill" id="progressFill"></div></div>
+    <div id="view" aria-live="off"></div>
+    <noscript><p class="noscript">この学習サイトはJavaScriptを使います。ブラウザのJavaScriptを有効にしてください。</p></noscript>
+  </main>
+</div>
+<nav class="mobile-nav" aria-label="モバイルメニュー">
+  <button class="nav-item" data-nav="library" data-action="nav" data-route="library"><span class="nav-icon">⌂</span>物語</button>
+  <button class="nav-item" data-nav="glossary" data-action="nav" data-route="glossary"><span class="nav-icon">⌕</span>用語</button>
+  <button class="nav-item" data-nav="review" data-action="nav" data-route="review"><span class="nav-icon">▤</span>単語</button>
+  <button class="nav-item" data-nav="stats" data-action="nav" data-route="stats"><span class="nav-icon">◷</span>記録</button>
+</nav>
+<dialog class="term-dialog" id="termDialog" aria-label="用語の解説">
+  <div class="dialog-inner">
+    <div class="dialog-top"><span class="eyebrow">IT WORDS IN YOUR HEART</span><button class="icon-btn" data-action="dialog-close" aria-label="閉じる">✕</button></div>
+    <div class="dialog-body" id="dialogContent"></div>
+    <div class="dialog-actions"><button class="outline-btn" id="dialogStar" data-action="star" data-id="">☆ 復習用に保存</button><button class="icon-btn" data-action="dialog-close">閉じる</button></div>
+  </div>
+</dialog>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
