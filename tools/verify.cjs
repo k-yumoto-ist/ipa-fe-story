@@ -7,7 +7,7 @@ vm.runInNewContext(fs.readFileSync('stories.js','utf8'),{window:win});
 const chapters=win.FE_STORIES;
 assert.ok(Array.isArray(chapters)&&chapters.length===12,'12 chapter slots are required');
 const published=chapters.filter(c=>!c.coming);
-assert.ok(published.length>=6,'At least six chapters must be readable');
+assert.equal(published.length,12,'All twelve chapters must be readable');
 const ids=new Set();
 let count=0;
 for(const chapter of published){
@@ -24,7 +24,7 @@ for(const chapter of published){
  const used=[...story.matchAll(/【([a-z0-9-]+)】/g)].map(x=>x[1]);
  for(const id of used)assert.ok(chapter.terms.some(t=>t.id===id),chapter.id+': unknown term marker '+id);
 }
-assert.equal(count,69,'Expected 69 glossary terms');
+assert.equal(count,140,'Expected 140 glossary terms');
 const html=fs.readFileSync('index.html','utf8');
 for(const asset of ['styles.css','stories.js','app.js','favicon.svg','manifest.webmanifest']){
  assert.ok(html.includes('./'+asset),'HTML missing linked asset '+asset);

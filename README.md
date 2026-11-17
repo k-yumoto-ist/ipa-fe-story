@@ -2,19 +2,16 @@
 
 基本情報技術者試験に登場するIT用語を、連作恋愛小説を読みながら覚える非公式学習サイトです。
 
-**公開予定URL:** https://k-yumoto-ist.github.io/ipa-fe-story/
+**公開URL:** https://k-yumoto-ist.github.io/ipa-fe-story/
 
-## 初回公開の設定
+## 公開と更新
 
-**Settings → Pages → Build and deployment → Source** を **GitHub Actions** に切り替えてください。
-続いて **Actions → Validate and publish to GitHub Pages → Run workflow** で main ブランチを実行します。以降、main へのプッシュで自動デプロイされます。
-
-未設定のリポジトリでは、Actionsが最初のPagesサイト作成を実行できない場合があるため、初回のみ所有者の操作が必要です。
+サイトは [GitHub Pages](https://k-yumoto-ist.github.io/ipa-fe-story/) で公開しています。main ブランチへの変更は GitHub Actions の構文・教材整合性チェックを通過してから自動公開されます。
 
 ## 機能
 
-- 全12章の連作。第1〜6話本文公開、第7〜12話は続刊予定
-- 公開済み6話で **69語** の用語解説を収録
+- **全12章を公開中**。第1話の出会いから、第12話の二人の約束まで続く一つの恋愛物語
+- **140語** の用語解説を収録（全12話、各話10〜12語程度）
 - 本文の色付き単語をタップすると意味と物語に結びついた覚え方を表示
 - 各話7問の四択クイズ。誤答を「苦手」に登録
 - 単語カードで想起練習、ブックマーク、用語検索・カテゴリ絞り込み
@@ -48,7 +45,7 @@ node tools/verify.cjs
 
 本文中の【term-id】をタップ可能な用語にするには、terms 配列に id / term / meaning / hook の4項目が必要です。IDは全章を通して重複させないでください。
 
-未公開章の coming: true を外し、story と terms を追加すると読書・検索・クイズに反映されます。新しい章や語を追加した場合は tools/verify.cjs に設定された件数の期待値も更新してください。
+新しい章を追加する場合は既存の章構造に倣って story と terms を追加してください。読書・検索・クイズへ自動反映されます。新しい章や語を追加した場合は tools/verify.cjs に設定された件数の期待値も更新してください。
 
 ## 範囲・注意事項
 
