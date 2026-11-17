@@ -1,5 +1,5 @@
-const CACHE='ipa-fe-story-static-v1';
-const ASSETS=['./','./index.html','./styles.css','./stories.js','./app.js','./favicon.svg','./manifest.webmanifest'];
+const CACHE='ipa-fe-story-static-v2';
+const ASSETS=['./','./index.html','./styles.css','./stories.js','./app.js','./favicon.svg','./favicon-32.png','./apple-touch-icon.png','./icon-192.png','./icon-512.png','./manifest.webmanifest'];
 self.addEventListener('install',event=>{
  event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS)).then(()=>self.skipWaiting()));
 });
