@@ -541,7 +541,7 @@ window.FE_STORIES = [
   },
   {
     "id": "development",
-    "group": "マネジメント",
+    "group": "テクノロジ",
     "topic": "システム開発",
     "number": "06",
     "title": "仕様書にない気持ち",
